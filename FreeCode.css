@@ -1,0 +1,141 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: #eee;
+}
+
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: sticky;
+	width: 100%;
+	height: 70px;
+	background-color: #eee;
+	margin: 0;
+}
+
+#nav-bar{
+	margin-top: 15px;
+	margin-right: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-evenly;
+}
+
+form #email {
+	width: 20%;
+	height: 25px;
+	margin-left: 40%;
+}
+
+form #start {
+	width: 10%;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 45%;
+	background-color: yellow;
+	border: none;
+	border-radius: 5px;
+}
+
+#header img {
+	height: 60px;
+	width: 400px;
+}
+
+.intro {
+	text-align: center;
+	margin: 0;
+}
+
+.features {
+	display: block;
+	width: 60%;
+	margin-left: 20%;
+
+}
+
+.features .features_1 {
+	display: flex;
+	flex-direction: row;
+}
+
+.features .features_1 .textie {
+	margin-left: 50px;
+	margin-bottom: 0px;
+}
+.features .icon {
+	color: darkorange;
+	margin-right: 10px;
+	margin-top: 30px;
+}
+
+.video {
+	margin-left: 30%;
+}
+
+.Pricing {
+	display: grid;
+	grid-template-columns: 250px 250px 250px;
+	grid-column-gap: 5%;
+	margin-left: 20%;
+	margin-top: 50px;
+}
+
+.Pricing #pricing {
+	border: 1px solid black;
+	height: 300px;
+}
+
+.Pricing #pricing h3{
+	background-color: #4444;
+	text-align: center;
+	margin-top: 0;
+}
+
+.Pricing #pricing a{
+	text-decoration: none;
+}
+
+.Pricing #pricing button{
+	background-color:yellow;
+	width: 110px;
+	height: 40px;
+	border: none;
+	margin-top: 30px;
+	margin-left: 30%;
+}
+
+.Pricing #pricing li {
+	list-style: none;
+	line-height: 30px;
+	margin-left: 30px;
+}
+
+.Pricing #pricing #price {
+	text-align: center;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 80%;
+	background-color: #4444;
+	margin-left: 10%;
+	margin-top: 30px;
+}
+
+footer li {
+	display: inline-block;
+	list-style: none;
+}
+
+li a{
+	text-decoration: none;
+}
