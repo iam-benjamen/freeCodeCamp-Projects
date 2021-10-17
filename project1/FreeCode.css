@@ -27,14 +27,14 @@ body {
 #nav-bar{
 	margin: 0;
 	width: 100%;
-	height: 70px;
+	height: 3.5rem;
 	background-color: #eee;
 	position: fixed;
 	top: 0;
 }
 
 .nav_links {
-	margin-top: 30px;
+	margin-top: 1.5rem;
 	margin-left: 55%;
 	display: grid;
 	grid-template-columns: 200px 200px 200px;
@@ -64,16 +64,16 @@ form #start {
 	height: 40px;
 	margin-top: 10px;
 	margin-left: 45%;
-	background-color: rgb(253, 249, 7);
+	background-color: #d4e91bb9;
 	border: none;
 	border-radius: 5px;
 }
 form #start:hover{
-	background-color: rgb(218, 200, 42);
+	background-color: rgba(158, 143, 4, 0.658);
+	cursor: pointer;
 }
 #nav-bar img {
-	margin-top: 10px;
-	height: 60px;
+	/* margin-top: 1.5rem; */
 	width: 25%;
 	position: fixed;
 }
@@ -114,14 +114,15 @@ form #start:hover{
 }
 
 .video {
-	margin-left: 25%;
+	display: flex;
+	justify-content: center;
 }
 
 .Pricing {
 	display: grid;
-	grid-template-columns: 250px 250px 250px;
+	grid-template-columns: 35% 35% 35%;
 	grid-column-gap: 5%;
-	margin-left: 15%;
+	margin-left: 10%;
 	margin-top: 50px;
 	width: 70%;
 }
@@ -154,8 +155,8 @@ form #start:hover{
 
 .Pricing #pricing li {
 	list-style: none;
-	line-height: 30px;
-	margin-left: 30px;
+	line-height: 2rem;
+	margin-left: 1rem;
 }
 
 .Pricing #pricing #price {
@@ -177,7 +178,7 @@ footer ul {
 	flex-direction: row;
 	justify-content: space-between;
 	list-style: none;
-	margin-right: 10px;
+	padding-right: 1rem;
 }
 
 li a{
@@ -186,5 +187,5 @@ li a{
 }
 
 footer .foot p {
-	margin-right: 10px;
+	padding-right: 1rem;
 }
