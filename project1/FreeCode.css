@@ -199,7 +199,7 @@ footer .foot span {
 (max-width: 480px) {
 	.Pricing {
 		flex-direction: column;
-		
+	
 		align-items: center;
 	}
 
@@ -245,5 +245,4 @@ footer .foot span {
 		width: 20rem;
 		margin-left: 13rem;
 	}
-	
 }
