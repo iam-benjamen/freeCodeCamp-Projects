@@ -1,3 +1,6 @@
 # freeCodeCamp-Projects
 
-This repo is a collection of my personal projects from Responsive Web Design course @ `www.freecodecamp.org` 
+Hi there,
+This repo is a collection of my projects from freeCodeCamp @ `www.freecodecamp.org`
+
+You can reach out to me at `areotimileyin1@gmail.com`.

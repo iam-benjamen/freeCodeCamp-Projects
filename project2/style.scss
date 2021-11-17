@@ -22,13 +22,14 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: $main-red
+  z-index: 20;
+  background-color: $main-red;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  height: 5rem;
+  height: 6rem;
   box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
   z-index: 10;
 
@@ -43,9 +44,9 @@ nav {
   li {
     color: $main-white;
     font-family: $second-font;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: 0px solid;
-    padding: 1rem 2rem;
+    padding: 1.4rem 2rem;
     cursor: pointer;
   }
   
@@ -56,15 +57,16 @@ nav {
 }
 
 .welcome-section{
-  background-color: black;
-  color: white;
+  background-image: linear-gradient(
+  62deg, #3a3d40 0%, #181719 100%);
+  color: $main-white;
   margin-top: 5rem;
   height: 100vh;
 
   .content{
     margin: auto;
     text-align: center;
-    padding-top: 40vh;
+    padding-top: 30vh;
     line-height: 25px;
   }
 
@@ -83,36 +85,120 @@ nav {
 
 .project {
   background-color: $main-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 {
     font-family: $first-font;
-    text-decoration: underline;
+    display: inline-block;
+    border-bottom: 1.5px solid;
     font-size: 40px;
     text-align: center;
-    color: white;
+    color: $main-white;
   }
 
-  // .project-content {
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex-wrap: wrap; 
-  // }
+  .project-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 
   .project-items {
     position: relative;
     width: 25rem;
+    height: 23rem;
+    margin: 0;
   }
 
   figcaption {
     position: absolute;
     bottom: 0;
     background-color: $main-gray;
-    color: white;
+    color: $main-white;
     width: 100%;
+    height: 15%;
+    text-align: center;
+    font-family: $second-font;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 
   img{
-    width: inherit;
+    width: 100%;
+    height: 85%;
     top: 0;
   }
+
+  a{
+    font-family: $second-font;
+    background-color: $main-gray;
+    padding: 10px 15px;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: $main-white;
+    font-size: 18px;
+  } 
+  
+  i{
+    padding-left: 3px;
+  }
+
+  a:hover {
+    background-color: $main-red;
+  }
+
+}
+
+.contact {
+  height: 100vh;
+  background-color: $main-gray;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid $main-red;
+
+  h2{
+    font-family: $first-font;
+    color: $main-white;
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: $second-font;
+    color: $main-white;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 5px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: $main-white;
+    font-family: $second-font;
+    font-size: 23px;
+    gap: 3rem;
+  }
+  
+  li {
+    cursor: pointer;
+  }
+}
+
+footer {
+  background-color: $main-gray;
+  color: $main-white;
+  height: 6rem;
+  font-family: $second-font;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
