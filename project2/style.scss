@@ -1,7 +1,118 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$first-font: 'Raleway', sans-serif;
+$second-font: 'Poppins', sans-serif;
+$main-white: #f0f0f0;
+$main-red: #be3144;
+$main-blue:#45567d;
+$main-gray: #303841;
+
+*{
+  box-sizing: border-box;
+}
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+  margin: 0;
+}
+
+main {
+  background-color: $main-blue;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $main-red
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 5rem;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+  z-index: 10;
+
+  ul {
+    list-style: none;
+    display: inherit;
+    align-items: center;
+    margin: 0;
+    margin-right: 2rem;
+  }
+
+  li {
+    color: $main-white;
+    font-family: $second-font;
+    font-size: 2rem;
+    border: 0px solid;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+  
+  li:hover,a:hover {
+    background-color: $main-blue;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+.welcome-section{
+  background-color: black;
+  color: white;
+  margin-top: 5rem;
+  height: 100vh;
+
+  .content{
+    margin: auto;
+    text-align: center;
+    padding-top: 40vh;
+    line-height: 25px;
+  }
+
+  h1{
+    font-family: $first-font;
+    font-size: 60px;
+  }
+
+  p {
+    font-family: $second-font;
+    color: $main-red;
+    font-size: 30px;
+    font-weight: 200;
+  }
+}
+
+.project {
+  background-color: $main-blue;
+
+  h2 {
+    font-family: $first-font;
+    text-decoration: underline;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+  }
+
+  // .project-content {
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: wrap; 
+  // }
+
+  .project-items {
+    position: relative;
+    width: 25rem;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: $main-gray;
+    color: white;
+    width: 100%;
+  }
+
+  img{
+    width: inherit;
+    top: 0;
+  }
 }
