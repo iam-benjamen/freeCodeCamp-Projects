@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -23,9 +27,9 @@ nav {
   display: flex;
   justify-content: flex-end;
   height: 6rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
-
 nav ul {
   list-style: none;
   display: inherit;
@@ -33,16 +37,14 @@ nav ul {
   margin: 0;
   margin-right: 2rem;
 }
-
 nav li {
   color: #f0f0f0;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   border: 0px solid;
-  padding: 1.4rem 2rem;
+  padding: 7.3% 2rem;
   cursor: pointer;
 }
-
 nav li:hover, nav a:hover {
   background-color: #45567d;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -54,24 +56,21 @@ nav li:hover, nav a:hover {
   margin-top: 5rem;
   height: 100vh;
 }
-
 .welcome-section .content {
-  margin: auto;
-  text-align: center;
   padding-top: 30vh;
-  line-height: 25px;
+  line-height: 0rem;
 }
-
 .welcome-section h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 60px;
+  font-size: 4rem;
+  text-align: center;
 }
-
 .welcome-section p {
   font-family: "Poppins", sans-serif;
   color: #be3144;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 200;
+  text-align: center;
 }
 
 .project {
@@ -80,30 +79,35 @@ nav li:hover, nav a:hover {
   flex-direction: column;
   align-items: center;
 }
-
 .project h2 {
   font-family: "Raleway", sans-serif;
   display: inline-block;
   border-bottom: 1.5px solid;
-  font-size: 40px;
+  font-size: 3rem;
   text-align: center;
   color: #f0f0f0;
 }
-
 .project .project-content {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
-
 .project .project-items {
   position: relative;
   width: 25rem;
   height: 23rem;
   margin: 0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
-
+.project .before-after {
+  display: none;
+  font-size: 1.5rem;
+  color: #be3144;
+}
+.project .project-items:hover {
+  cursor: pointer;
+}
 .project figcaption {
   position: absolute;
   bottom: 0;
@@ -115,31 +119,36 @@ nav li:hover, nav a:hover {
   font-family: "Poppins", sans-serif;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
+.project figcaption:hover .before-after {
+  display: inline-block;
+}
 .project img {
   width: 100%;
   height: 85%;
   top: 0;
 }
-
-.project a {
+.project #show-button {
   font-family: "Poppins", sans-serif;
   background-color: #303841;
   padding: 10px 15px;
+  border-radius: 2px;
   margin-top: 2rem;
   cursor: pointer;
   text-decoration: none;
   color: #f0f0f0;
-  font-size: 18px;
+  font-size: 1.5rem;
+  transition: all 0.6s cubic-bezier(0.39, 0.5, 0.15, 1.36);
 }
-
-.project i {
-  padding-left: 3px;
-}
-
-.project a:hover {
+.project #show-button:hover {
   background-color: #be3144;
+}
+.project #show-button:hover i {
+  padding-left: 3px;
 }
 
 .contact {
@@ -152,14 +161,13 @@ nav li:hover, nav a:hover {
   align-items: center;
   border-bottom: 5px solid #be3144;
 }
-
 .contact h2 {
   font-family: "Raleway", sans-serif;
   color: #f0f0f0;
-  font-size: 50px;
+  font-size: 3rem;
   margin-bottom: 0;
+  text-align: center;
 }
-
 .contact p {
   font-family: "Poppins", sans-serif;
   color: #f0f0f0;
@@ -167,19 +175,24 @@ nav li:hover, nav a:hover {
   font-weight: 200;
   margin-top: 5px;
 }
-
 .contact ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   color: #f0f0f0;
   font-family: "Poppins", sans-serif;
-  font-size: 23px;
+  font-size: 1.5rem;
   gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
 }
-
 .contact li {
   cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+.contact li:hover {
+  transform: translateY(9px);
 }
 
 footer {
@@ -187,8 +200,62 @@ footer {
   color: #f0f0f0;
   height: 6rem;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  padding-left: 6px;
 }
+
+@media screen and (max-width: 475px) {
+  .welcome-section .content h1 {
+    font-size: 3rem;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8rem;
+  }
+
+  .project .project-items {
+    width: 20rem;
+  }
+
+  nav li {
+    padding: 7.3% 1rem;
+  }
+}
+@media screen and (max-width: 346px) {
+  .welcome-section .content h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section .content p {
+    font-size: 1rem;
+  }
+
+  .welcome-section .content {
+    line-height: 1rem;
+  }
+
+  .project h2 {
+    font-size: 1.5rem;
+  }
+
+  .project .project-items {
+    width: 15rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  nav li {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
